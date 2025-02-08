@@ -1,0 +1,10 @@
+import sqlite3
+# Подключение к базе данных SQLite
+conn = sqlite3.connect('database.db')
+c = conn.cursor()
+c.execute('''
+SELECT .StudentsID, Students.StudentsName, Courses.CoursesID, Courses.Info,
+FROM Students
+FULL OUTER JOIN Courses ON Students.StudentsID = Courses.StudentsID
+WHERE Courses.Students ID IS NULL OR Students.Student ID IS NULL
+''')
